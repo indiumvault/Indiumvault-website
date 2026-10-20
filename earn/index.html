@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0d16">
+  <meta name="description" content="IndiumVault Earn — explore tasks and reward options. Offers and payouts are shown only when verified integrations are configured.">
+  <meta name="robots" content="noindex,follow">
+  <title>Earn | IndiumVault</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="../favicon.ico">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <a class="brand" href="../" aria-label="IndiumVault home">
+        <span class="mark">IV</span>
+        <span>IndiumVault<small>EARN</small></span>
+      </a>
+      <button class="avatar" id="accountButton" type="button" aria-label="Account">↗</button>
+    </header>
+
+    <section class="intro">
+      <p class="eyebrow">YOUR REWARD SPACE</p>
+      <h1>Small tasks.<br><span>Real progress.</span></h1>
+      <p class="muted">Explore reward opportunities in one place. Offers and rewards will appear here once verified partners are connected.</p>
+    </section>
+
+    <section class="balance" aria-labelledby="balanceTitle">
+      <div class="balance-head"><span id="balanceTitle">Available balance</span><b id="modeBadge">PREVIEW MODE</b></div>
+      <p class="amount">₹<span id="balanceAmount">0.00</span> <small>INR</small></p>
+      <div class="balance-foot"><span id="balanceCaption">No verified earnings yet</span><button id="balanceInfo" type="button">How it works ↗</button></div>
+    </section>
+
+    <section class="stats" aria-label="Account overview">
+      <div><b id="completedCount">0</b><small>Tasks completed</small></div>
+      <div><b id="pendingCount">0</b><small>Pending rewards</small></div>
+      <div><b id="referralCount">0</b><small>Referrals</small></div>
+    </section>
+
+    <section aria-labelledby="tasksTitle">
+      <div class="heading">
+        <div><p class="eyebrow">DISCOVER</p><h2 id="tasksTitle">Ways to earn</h2></div>
+        <small id="taskCount">Partner setup pending</small>
+      </div>
+      <div class="task">
+        <div class="task-icon purple" aria-hidden="true">◎</div>
+        <div class="task-info"><b>Surveys</b><p>Answer partner surveys when available.</p><small>PARTNER INTEGRATION</small></div>
+        <div class="task-action"><b>—</b><button type="button" data-info="surveys">Details</button></div>
+      </div>
+      <div class="task">
+        <div class="task-icon blue" aria-hidden="true">▣</div>
+        <div class="task-info"><b>Apps & games</b><p>Discover app and game offers from partners.</p><small>PARTNER INTEGRATION</small></div>
+        <div class="task-action"><b>—</b><button type="button" data-info="apps">Details</button></div>
+      </div>
+      <div class="task">
+        <div class="task-icon green" aria-hidden="true">↗</div>
+        <div class="task-info"><b>Special offers</b><p>Eligible offers and conditions will be listed clearly.</p><small>PARTNER INTEGRATION</small></div>
+        <div class="task-action"><b>—</b><button type="button" data-info="offers">Details</button></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="rewardsTitle">
+      <div class="heading"><div><p class="eyebrow">REDEEM</p><h2 id="rewardsTitle">Reward options</h2></div><small>Not enabled yet</small></div>
+      <div class="rewards">
+        <article><span aria-hidden="true">🎁</span><b>Gift cards</b><p>Availability and minimums to be confirmed.</p></article>
+        <article><span aria-hidden="true">₹</span><b>Cash rewards</b><p>Payment methods depend on supported providers.</p></article>
+        <article><span aria-hidden="true">🧾</span><b>Reward history</b><p>Track verified activity once accounts are connected.</p></article>
+      </div>
+    </section>
+
+    <section class="referral">
+      <p class="eyebrow">GROW TOGETHER</p>
+      <h2>Invite friends, later.</h2>
+      <p class="muted">Referral rewards will only launch after eligibility rules and fraud checks are ready.</p>
+      <button id="referralButton" class="okay" type="button">Referral system not active</button>
+      <p id="copyMessage" role="status" aria-live="polite"></p>
+    </section>
+
+    <p class="notice"><b>Transparency first.</b> This page is in preview mode. No tasks, earnings, or payouts are currently being promised by this screen. Reward availability, tracking, eligibility, and withdrawal rules must be confirmed before launch. Never pay to unlock an earning offer.</p>
+  </main>
+
+  <nav aria-label="Main navigation">
+    <a href="./" aria-current="page"><span aria-hidden="true">⌂</span><small>Home</small></a>
+    <a href="#tasksTitle"><span aria-hidden="true">◈</span><small>Tasks</small></a>
+    <a href="#rewardsTitle"><span aria-hidden="true">◇</span><small>Rewards</small></a>
+    <button id="navAccount" type="button"><span aria-hidden="true">○</span><small>Account</small></button>
+  </nav>
+
+  <dialog id="infoDialog" aria-labelledby="dialogTitle">
+    <button class="close" id="closeDialog" type="button" aria-label="Close">×</button>
+    <p class="eyebrow">INDIUMVAULT EARN</p>
+    <h2 id="dialogTitle">Preview mode</h2>
+    <p id="dialogText" class="muted">This feature is not active yet.</p>
+    <button class="okay" id="dialogOkay" type="button">Got it</button>
+  </dialog>
+  <script src="./script.js" defer></script>
+</body>
+</html>
